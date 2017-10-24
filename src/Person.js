@@ -1,11 +1,9 @@
-class Person {
-  constructor(name) {
-    this.name = name;
-  }
+function fire(bool) {
+  if (bool) {
+    var foo = 'bar';
 
-  greet() {
-    return this.name + ' says hello.';
+    console.log(foo);
   }
 }
 
-console.log(new Person('Matt').greet());
+fire(true);

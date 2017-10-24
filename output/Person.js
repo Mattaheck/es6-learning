@@ -1,11 +1,25 @@
-class Person {
-  constructor(name) {
-    this.name = name;
+class TaskCollection {
+  constructor(tasks = []){
+    this.tasks = tasks
   }
 
-  greet() {
-    return this.name + ' says hello.';
+  log() {
+    this.tasks.forEach(task => {
+      console.log(this);
+    });
+
+
   }
 }
 
-console.log(new Person('Matt').greet());
+
+class Task {
+  toGulp() {
+    console.log('converting to gulp')
+  }
+}
+
+
+new TaskCollection([
+  new Task, new Task, new Task
+]).log();
